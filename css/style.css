@@ -1,0 +1,678 @@
+*,*::after,*::before{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html{
+  scroll-padding: 70px;
+}
+
+/* الحالة الطبيعية – شفاف */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+/* بعد السكروول */
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+
+
+
+
+
+
+
+
+
+.background-header{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./bg.jpg");
+background-attachment: fixed;
+min-height: 100vh;
+background-position: center;
+background-size: cover;
+
+}
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  text-align: center;
+  
+
+}
+
+
+.header-content .content {
+  width: 100%;
+  max-width: 600px;
+ width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.social-icons li{
+  width: 30px;
+  height: 30px;
+
+}
+.first-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;               
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;                  /* عرض الخط */
+  height: 3px;                  /* سمكه */
+  background-color: white;
+
+}
+.nav-link:target {
+  position: relative;
+  color: black !important;
+}
+
+.nav-link:target::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: aquamarine;
+}
+
+
+
+
+#typed {
+  text-align: center;
+  color: white;
+  display: inline; /* تأكدي إنه inline */
+  white-space: nowrap;
+
+  max-width: 100%; 
+      overflow: hidden;
+}
+.typed-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px; /* أو أي عرض مناسب بناءً على حجم النص المتوقع */
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+
+
+
+.typed-cursor {
+  color: white;
+  font-weight: 300;
+  display: inline; /* يخليه على نفس السطر */
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.about .image {
+  position: relative;  
+  display: inline-block; 
+  z-index: 1;
+}
+
+
+
+.about .image::after {
+  content: "";
+  position: absolute;
+  left: -10%;  
+  width: 100%;  
+  height: 100%;
+  background-image: url("./dots.png");
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+.about-tilte {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* مسافة بين العناوين */
+}
+
+.sub-title {
+  font-size: 14px;
+  color: #aaa;
+}
+.about-title p{
+  font-size: 15px;
+  line-height:24px;
+color:rgb(116, 129, 130);
+font-weight: 400;
+
+}
+
+.service-title::after{
+  content: "";
+  position: absolute;
+  bottom: -8px;
+left: 50%;
+transform: translate(-50%,-50%);
+  background-image: url("./dots.png");
+  background-repeat: repeat;
+
+  width: 125px;
+  height: 6px;
+}
+
+
+.navtabs .container-fluid div{
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+ .navtabs .nav-item button::after{
+  content: "";
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+width: 40px;
+height: 3px;
+background-color:black;
+opacity: 0;
+transition: opacity 0.3s ease-in;
+ }
+ .navtabs .nav-item button:hover::after{
+  content: "";
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+width: 40px;
+height: 3px;
+background-color:black;
+opacity: 1;
+
+ }
+.navtabs  .nav-item .nav-link {
+  position: relative;
+}
+
+.navtabs   .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: red;
+
+}
+
+.tab-content .image .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease-in, opacity 0.3s ease-in;
+  opacity: 0;
+  z-index: 10; /* للتأكد إنها تظهر فوق الصورة */
+}
+
+.tab-content .image:hover .overlay{
+
+  background: linear-gradient(rgb(255,255,255),rgb(255,255,255));
+  opacity: 1;
+
+}
+
+
+
+
+.icon-overlay i{
+  width: 30px;
+  height: 30px;
+  line-height: 2;
+}
+
+.icon-overlay i:hover{
+  background-color: white  ;
+  color: black ;
+}
+
+
+.tab-content .image-three .overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    transition: opacity 0.3s ease-in;
+  opacity: 0;
+  z-index: 10; /* للتأكد إنها تظهر فوق الصورة */
+}
+
+.tab-content .image-three:hover .overlay{
+
+  background: linear-gradient(to bottom,rgb(255,255,255), rgb(255,255,255,0.3));
+  
+opacity: 1;
+
+}
+
+
+.overlay-four {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 88%;
+  height: 88%;
+
+  /* تدرج خفيف للتأثير */
+  background: linear-gradient( rgb(255,255,255), rgb(255,255,255));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  pointer-events: none; /* يمنع التفاعل مع الجزء الفارغ تحت */
+}
+.image:hover .overlay-four {
+  opacity: 1;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+border-radius: 50%;
+  background-color: #666;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: none;
+  margin:  5px;
+}
+
+.carousel-indicators .active {
+    width: 10px;
+  height: 10px;
+  opacity: 1;
+  background-color: #000;
+}
+
+.team-image-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+transform:translate(-50%,-50%);
+opacity:0;
+transition:transform 0.3s ease-in;
+width:100%;
+height:100%;
+  background-color: white;
+
+  
+} 
+.team-icons li a{
+  display: inline-block;
+    width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: black;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.team-icons li a:hover{
+    background-color: black;
+  color: #f4f4f4;
+}
+
+
+.card {
+  background-color: #666;
+  perspective: 1000px; /* 👈 مهم لتفعيل تأثير 3D */
+}
+.cards .lap{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: black;
+  border-radius: 50%;
+}
+.cards .lap:hover{
+  background-color: black;
+  color: #f4f4f4;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* 👈 لتفعيل قلب ثلاثي الأبعاد */
+}
+
+.team-image-overlay {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  backface-visibility: hidden;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.card:hover .team-image-overlay {
+  opacity: 1;
+}
+.container-fluid .form-control .name,.container-fluid .form-control .email{
+
+width: 50%;
+
+}
+.contact span{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: black;
+  border-radius: 50%;
+}
+.contact span:hover{
+  background-color: black;
+  color: #f4f4f4;
+}
+
+.submit input[type="submit"]:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* للأجهزة الصغيرة – أقل من 768px */
+@media (max-width: 767px) {
+  .header-content {
+    top: 45%;
+  }
+
+  .typed-wrapper {
+    width: 90%;
+  }
+
+  .about .image::after {
+    left: 0; /* قللي الفراغ الجانبي */
+  }
+  .about .image img {
+  
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about .image::after {
+    left: 0;
+    width: 100%;
+  }
+
+    .team-image-overlay {
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    transform: none;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.9); 
+    transition: none;
+    border-radius: 0;
+    overflow: hidden;
+  }
+.our-team .row-cols-3>*{
+  width: 100%;
+}
+
+  .card:hover .team-image-overlay {
+    opacity: 1;
+  }
+
+
+  .team-icons li a {
+    border-radius: 0 !important;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .team-icons li a:hover {
+    border-radius: 0 !important;
+  }
+}
+
+  .about-title, .about-title p {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .container-fluid .form-control .name,
+  .container-fluid .form-control .email {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .counter-number-first p,.counter-number-second p,.couner-number-third p,.counter-number-fourth p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .team-icons li a {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .cards .lap {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .navtabs .container-fluid div {
+    padding: 10px;
+  }
+
+
+/* للأجهزة المتوسطة – بين 768px و 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .typed-wrapper {
+    width: 80%;
+  }
+
+  .container-fluid .form-control .name,
+  .container-fluid .form-control .email {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .header-content {
+    top: 40%;
+    padding: 0 10px;
+  }
+
+  .typed-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  #typed {
+    font-size: 20px;
+  }
+
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    font-size: 14px;
+  }
+
+
+  .about-title, .about-title p {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .about .image::after {
+    left: 0;
+    width: 100%;
+  }
+
+  .social-icons li {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .navtabs .nav-item .nav-link {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+
+  .tab-content .image,
+  .tab-content .image-three {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tab-content .image .overlay,
+  .tab-content .image-three .overlay,
+  .image .overlay-four {
+    width: 95%;
+    height: 90%;
+  }
+
+  /* الفريق */
+  .team-icons li a,
+  .cards .lap {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .team-image-overlay {
+    width: 90%;
+    height: 90%;
+  }
+
+
+  .container-fluid .form-control .name,
+  .container-fluid .form-control .email {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contact span {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  .submit input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .contact .row-cols-3>*{
+    width: 100%;
+  }
+  .contact p{
+    font-size: 15px;
+  }
+}
