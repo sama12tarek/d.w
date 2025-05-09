@@ -1,4 +1,4 @@
-*,*::after,*::before{
+*, *::after, *::before {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -19,12 +19,19 @@ html{
   scroll-padding: 70px;
 }
 
-/* الحالة الطبيعية – شفاف */
+.background-header{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/imgs/bg.jpg");
+background-attachment: fixed;
+min-height: 100vh;
+background-position: center;
+background-size: cover;
+
+}
 .navbar {
   background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
 
+}
 
 .navbar .nav-link,
 .navbar .navbar-brand {
@@ -52,14 +59,7 @@ html{
 
 
 
-.background-header{
-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./bg.jpg");
-background-attachment: fixed;
-min-height: 100vh;
-background-position: center;
-background-size: cover;
 
-}
 .header-content {
   position: absolute;
   top: 50%;
@@ -161,7 +161,7 @@ background-size: cover;
   left: -10%;  
   width: 100%;  
   height: 100%;
-  background-image: url("./dots.png");
+  background-image: url("../images/imgs/dots.png");
   background-repeat: repeat;
   z-index: -1;
 }
@@ -190,7 +190,7 @@ font-weight: 400;
   bottom: -8px;
 left: 50%;
 transform: translate(-50%,-50%);
-  background-image: url("./dots.png");
+background-image: url("../images/imgs/dots.png");
   background-repeat: repeat;
 
   width: 125px;
